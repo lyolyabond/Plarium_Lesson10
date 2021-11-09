@@ -24,6 +24,7 @@ namespace Plarium_Lesson10
             Manufacturers.Add(ID, manufacturer);
             //Файл очищается, чтобы не хранить некорректную информацию
             File.WriteAllText(Program.path, String.Empty);
+            Database.AddManufacturerToDatabase(ID, Menu.databaseName);
         }
         /// <summary>
         /// Метод удаляет объект из словаря по заданному названию производителя
@@ -70,6 +71,7 @@ namespace Plarium_Lesson10
             Console.WriteLine("Коллекции очищены.");
             //Файл очищается, чтобы не хранить некорректную информацию
             File.WriteAllText(Program.path, String.Empty);
+            File.WriteAllText(Menu.databaseName + ".txt", String.Empty);
         }
     }   
 }

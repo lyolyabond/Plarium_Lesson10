@@ -246,7 +246,7 @@ namespace Plarium_Lesson10
                         decimal price = Input.InputPrice();
                         if (souvenir.Price != price)
                         {
-                            souvenir.Price = price;
+                            Database.ChangePrice(Menu.databaseName, souvenir, price);
                             flag = true;
                         }
                         else

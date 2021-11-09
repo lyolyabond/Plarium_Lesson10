@@ -83,6 +83,7 @@ namespace Plarium_Lesson10
         public void Add(Souvenir souvenir)
         {
             Souvenirs.Add(souvenir);
+            Database.AddSouvenirToDatabase(Menu.databaseName);
         }
         /// <summary>
         /// Метод очищает список
@@ -115,6 +116,7 @@ namespace Plarium_Lesson10
                 {
                     //Удаление элемента по индексу из списка сувениров
                     this.Remove(i);
+                    Database.DeleteRecord(Menu.databaseName, keyEventArgs.Key);
                     flag = true;
                 }
             }
