@@ -26,7 +26,7 @@ namespace Plarium_Lesson10
     {
         //Список объектов класса сувенира
         [DataMember]
-        public List<Souvenir> Souvenirs { get; }
+        public List<Souvenir> Souvenirs { get; set; }
         public CollectionClass()
         {
             Souvenirs = new List<Souvenir>();
