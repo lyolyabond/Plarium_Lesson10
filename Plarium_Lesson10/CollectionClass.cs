@@ -95,7 +95,7 @@ namespace Plarium_Lesson10
         /// <summary>
         /// Метод сортирует список по цене
         /// </summary>
-        public void SortByPrice()=> Souvenirs.OrderBy(souvenir => souvenir.Price);
+        public void SortByPrice()=> Souvenirs.Sort(new ComparerByPrice());
         /// <summary>
         /// Метод сортирует список по названию
         /// </summary>
